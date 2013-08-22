@@ -97,7 +97,8 @@ Meteor.http.call = function(method, url, options, callback) {
     timeout: options.timeout,
     body: content,
     followRedirect: options.followRedirects,
-    headers: headers
+    headers: headers,
+    proxy: options.proxy
   };
 
   request(req_options, function(error, res, body) {
