@@ -17,6 +17,8 @@ Meteor.http.call = function(method, url, options, callback) {
   }
 
   options = options || {};
+  if (typeof options.proxy === 'undefined')
+    console.log("No proxy specified");
 
   method = (method || "").toUpperCase();
 
